@@ -49,7 +49,7 @@ makepkg -si
 
 `Ctrl + b` -- bookmark site (to remove just edit file with links: .fav in your home dir)
 
-`Ctrl + o` -- toogle url bar
+`Ctrl + l` -- toogle location (URL) bar
 
 `Ctrl + /` -- find word
 
