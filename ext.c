@@ -2,16 +2,11 @@
 
 #include <stdio.h>
 
-
 #include <glib.h>
 
 #include <webkit2/webkit-web-extension.h>
 
-
-
 static GSList *adblock_patterns = NULL;
-
-
 
 static void
 
@@ -26,7 +21,6 @@ adblock_load(void)
     GIOChannel *channel = NULL;
 
     gchar *path = NULL, *buf = NULL;
-
 
     path = g_build_filename("/home/r/easylist.txt",NULL);
 
@@ -83,7 +77,6 @@ adblock_load(void)
 
 }
 
-
 static gboolean
 
 web_page_send_request(WebKitWebPage *web_page, WebKitURIRequest *request,
@@ -96,9 +89,7 @@ web_page_send_request(WebKitWebPage *web_page, WebKitURIRequest *request,
 
     const gchar *uri;
 
-
     uri = webkit_uri_request_get_uri(request);
-
 
     while (it)
 
@@ -112,11 +103,9 @@ web_page_send_request(WebKitWebPage *web_page, WebKitURIRequest *request,
 
     }
 
-
     return FALSE;
 
 }
-
 
 static void
 
@@ -131,7 +120,6 @@ web_page_created_callback(WebKitWebExtension *extension, WebKitWebPage *web_page
                             G_CALLBACK(web_page_send_request), NULL, 0);
 
 }
-
 
 G_MODULE_EXPORT void
 

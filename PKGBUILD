@@ -13,15 +13,10 @@ depends=('webkit2gtk')
 
 source=("git+https://github.com/nihilowy/surfer.git")
 
-
-
-
 build() {
 	cd "$pkgname"
 	make
 }
-
-
 
 package() {
 	cd "$pkgname"

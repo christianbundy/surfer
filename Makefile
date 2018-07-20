@@ -20,7 +20,6 @@ adblock.so: ext.c Makefile
 		`pkg-config --cflags --libs gtk+-3.0 glib-2.0 webkit2gtk-4.0` \
 		$(DDEBUG)
 
-
 install:all
 	install -d $(INSTALLDIR)/usr/share/surfer
 	install -d $(INSTALLDIR)/usr/lib
@@ -30,13 +29,4 @@ install:all
 	install -Dm644 surfer.desktop $(DESTDIR)/usr/share/applications/surfer.desktop
 	install -Dm644 surfer.1 $(DESTDIR)/usr/share/man/man1/surfer.1
 	install -Dm644 black.css $(DESTDIR)/usr/share/surfer/black.css
-
-  
-
-
-
-
-
-
-
 
