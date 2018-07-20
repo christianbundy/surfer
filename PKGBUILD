@@ -3,7 +3,6 @@
 pkgname=surfer
 pkgver=1
 pkgrel=1
-
 pkgdesc="basic webkit2gtk browser"
 arch=('i686' 'x86_64')
 url="https://github.com/nihilowy/surfer"
@@ -20,6 +19,6 @@ build() {
 
 package() {
 	cd "$pkgname"
-	make DESTDIR="$pkgdir/" install
+	DESTDIR="/opt/surfer" sudo make install
 }
 md5sums=('SKIP')
