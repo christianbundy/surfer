@@ -8,7 +8,7 @@
 
 #define SURFER_META_MASK            GDK_CONTROL_MASK
 #define SURFER_NEW_WINDOW_KEY       GDK_KEY_n
-#define SURFER_OPEN_KEY             GDK_KEY_o
+#define SURFER_OPEN_KEY             GDK_KEY_l
 #define SURFER_CLOSE_KEY            GDK_KEY_q
 #define SURFER_BACK_KEY             GDK_KEY_s
 #define SURFER_FORWARD_KEY          GDK_KEY_d
@@ -579,6 +579,7 @@ openlink(GtkWidget * widget,Client *c){
     loadurl(c, link);
     g_free(link);
     gtk_widget_hide(c->box_open);
+    c->o = 0;
 }
 
 void
