@@ -2,77 +2,80 @@
 
 Simple keyboard based web browser. No tabs.
 
-Based on webkit2gtk and gtk3. Lariza and Epiphany, Surf inspired.
+Based on Webkit2GTK and GTK3. Inspired by Lariza, Epiphany, and Surf.
 
-No xlibs dependency &mdash; works on wayland, weston, sway.
+No xlibs dependency -- works on Wayland, Weston, and Sway.
 
 ## Adblock
 
-Install https://github.com/jun7/wyebadblock
+1. Install https://github.com/jun7/wyebadblock
 
-Then sudo ln -s /usr/lib/wyebrowser/adblock.so  /usr/lib/surfer
+2. `sudo ln -s /usr/lib/wyebrowser/adblock.so  /usr/lib/surfer`
 
+Otherwise, you can use an `/etc/hosts` block list from sites like:
 
-
-Otherwise You can use `/etc/hosts block` list from  sites like 
-someonewhocares.org
-
+- https://someonewhocares.org
+- (to be continued, add yours here)
 
 ## Compile and install:
 
-  sudo make install
+```
+sudo make install
+```
 
+On Arch Linux you can install with `yaourt surfer`, or manually with:
 
-  on Arch: yaourt surfer
+```
+git clone https://github.com/christianbundy/surfer.git
+cd surfer
+makepkg -si
+```
 
 ## Hotkeys:
 
-`Ctrl + click` link &mdash; open link in new window
+`Ctrl + click` link -- open link in new window
 
-`Ctrl + n` &mdash; new window
+`Ctrl + n` -- new window
 
-`Ctrl +  s` &mdash; go back
+`Ctrl +  s` -- go back
 
-`Ctrl +  d` &mdash; go forward
+`Ctrl +  d` -- go forward
 
-`Ctrl + q` &mdash; quit
+`Ctrl + q` -- quit
 
-`Esc` &mdash; stop loading
+`Esc` -- stop loading
 
-`Ctrl + h` &mdash; home (bookmarks list)
+`Ctrl + h` -- home (bookmarks list)
 
-`Ctrl + b` &mdash; bookmark site (to remove just edit file with links: .fav in your home dir)
+`Ctrl + b` -- bookmark site (to remove just edit file with links: .fav in your home dir)
 
-`Ctrl + o` &mdash; toogle url bar
+`Ctrl + o` -- toogle url bar
 
-`Ctrl + /` &mdash; find word
+`Ctrl + /` -- find word
 
-`Ctrl + r` &mdash; reload page
+`Ctrl + r` -- reload page
 
-`Ctrl + =` &mdash; zoom in
+`Ctrl + =` -- zoom in
 
-`Ctrl + -` &mdash; zoom out
+`Ctrl + -` -- zoom out
 
-`Ctrl + j` &mdash; scroll down
+`Ctrl + j` -- scroll down
 
-`Ctrl + k` &mdash; scroll up
+`Ctrl + k` -- scroll up
 
-`Ctrl + Shift + u` &mdash; page up
+`Ctrl + Shift + u` -- page up
 
-`Ctrl + Shift + d` &mdash; page down
+`Ctrl + Shift + d` -- page down
 
-`Ctrl + i` &mdash; web inspector (page source)
+`Ctrl + i` -- web inspector (page source)
 
-`Ctrl + Shift + s` &mdash; toogle user style black theme 
+`Ctrl + Shift + s` -- toogle user style black theme 
 (/usr/share/surfer/black.css)
 
-`Ctrl + Shift + r` &mdash; show history (.hist file in HOME dir), to 
+`Ctrl + Shift + r` -- show history (.hist file in HOME dir), to 
 enable history 
 change HISTORY_ENABLE to 1 in surfer.c
 
-`F11` &mdash; toogle fullscreen
-
-
-
+`F11` -- toogle fullscreen
 
 **Edit `surfer.c` to change hotkeys**
