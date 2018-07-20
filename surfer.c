@@ -632,8 +632,6 @@ int main(int argc, char *argv[]) {
 
     gtk_init(&argc, &argv);
 
-    //
-
     favfilename = g_strdup_printf("%s", ".fav");
     favpath = g_build_filename(getenv("HOME"), favfilename, NULL);
     g_free(favfilename);
