@@ -484,6 +484,7 @@ keyboard(GtkWidget *widget,GdkEvent *event, Client *c,  gpointer data) {
                     url = webkit_web_view_get_uri(WEBKIT_WEB_VIEW(c->webView));
                     gtk_entry_set_text(GTK_ENTRY(c->entry_open), url);
                         c->o = 1;
+												gtk_widget_grab_focus(GTK_WIDGET(c->entry_open));
 		
                     } else {
                      gtk_widget_hide(c->box_open);
