@@ -20,6 +20,6 @@ build() {
 
 package() {
 	cd "$pkgname"
-	DESTDIR="/opt/$pkgname" sudo make install
+	DESTDIR="${pkgdir}/opt/$pkgname" make install
 }
 md5sums=('SKIP')
